@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/steffijerome0809/Eat-Da-Burger/issues"
   },
-  "homepage": "https://github.com/steffijerome0809/Eat-Da-Burger#readme"
+  "homepage": "https://github.com/steffijerome0809/Eat-Da-Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
