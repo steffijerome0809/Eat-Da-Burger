@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#parallax-image {
+  background-image: url("burgerpage.jpg");
+  height: 300px;
+  margin-bottom: 50px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#parallax-image1 {
+  background-image: url("burgerpage.jpg");
+  height: 500px;
+  margin-bottom: 30px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  font-family: Cosmic Sans MS, Cosmic Sans, Cursive;
+  color: whitesmoke;
+  font-size: 50px;
+}
+
+.footer {
+  background-color: grey;
+  text-align: center;
+  margin-left: 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.card-1 {
+  margin-bottom: 100px;
+  background-color: mediumaquamarine;
+}
