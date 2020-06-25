@@ -1,6 +1,5 @@
 // requiring dependencies
 var express = require("express");
-var bodyParser = require("body-parser");
 
 //port config
 var PORT = process.env.PORT || 8080;
@@ -10,8 +9,8 @@ var app = express();
 app.use(express.static("public"));
 
 // middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //set handlebars
 var exphbs = require("express-handlebars");
