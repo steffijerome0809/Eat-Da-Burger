@@ -2,7 +2,7 @@
 var express = require("express");
 
 //port config
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 var app = express();
 
 // static folder
@@ -18,7 +18,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // import routes
-var routes = require("./controllers/burger_controller");
+var routes = require("./controllers/burger_controller.js");
 app.use(routes);
 
 //start the server
