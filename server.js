@@ -1,5 +1,6 @@
 // requiring dependencies
 var express = require("express");
+var bodyParser = require("body-parser");
 
 //port config
 var PORT = process.env.PORT || 8080;
@@ -9,8 +10,8 @@ var app = express();
 app.use(express.static("public"));
 
 // middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //set handlebars
 var exphbs = require("express-handlebars");
@@ -18,7 +19,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // import routes
-var routes = require("./controllers/burger_controller.js");
+const routes = require("./controllers/burger_controller.js");
 app.use(routes);
 
 //start the server
