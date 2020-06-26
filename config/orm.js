@@ -17,6 +17,7 @@ function objToSql(ob) {
       arr.push(key + "=" + value);
     }
   }
+  return arr.toString();
 }
 //start of the orm function
 
@@ -28,8 +29,8 @@ var orm = {
     connection.query(queryString, function (err, response) {
       if (err) throw err;
 
-      // cb(response);
-      console.log(response);
+      cb(response);
+      // console.log(response);
     });
   },
 
