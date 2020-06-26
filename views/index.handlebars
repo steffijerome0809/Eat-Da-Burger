@@ -17,7 +17,8 @@
                         <h4 class="card-title">Available Burgers</h4>
                         <hr />
                         <ul class="list-unstyled">
-                            <!-- {{#each burger}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}} -->
+                            {{#each burger}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}}
+                            {{/each}}
                             BLOCK LIST
                         </ul>
                     </div>
@@ -37,8 +38,8 @@
                         <h4 class="card-title">Devoured Burgers</h4>
                         <hr />
                         <ul class="list-unstyled">
-                            <!-- {{#each burger}} {{#if devoured}} {{> burgers/burger-block
-                  devoured=false}} {{/if}} {{/each}} -->
+                            {{#each burger}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}}
+                            {{/each}}
                         </ul>
                     </div>
                 </div>

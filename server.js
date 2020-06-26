@@ -2,7 +2,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 //port config
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 var app = express();
 
 // static folder
