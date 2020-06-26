@@ -61,4 +61,4 @@ var orm = {
 
 //export the orm
 
-module.exporrts = orm;
+module.exports = orm;
