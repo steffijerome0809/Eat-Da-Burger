@@ -1,4 +1,4 @@
-const connection = require("../config/connection");
+const connection = require("./connection");
 
 // function to convert object key/value pairs to sql syntax
 
@@ -38,10 +38,12 @@ var orm = {
 
   insertOne: function (table, col, val, cb) {
     var queryString =
-      "INSERT INTO" + table + "(" + col + ") values (" + val + ");";
+      "INSERT INTO " + table + "(" + col + ") values ('" + val + "');";
+    console.log(queryString);
     connection.query(queryString, function (err, response) {
       if (err) throw err;
       cb(response);
+      console.log(response);
     });
   },
 
@@ -49,11 +51,18 @@ var orm = {
 
   updateOne: function (table, colVal, condition, cb) {
     var queryString =
-      "UPDATE" + table + "SET" + objToSql(colVal) + "WHERE" + condition + ";";
-
+      "UPDATE " +
+      table +
+      " SET " +
+      objToSql(colVal) +
+      " WHERE " +
+      condition +
+      ";";
+    console.log(queryString);
     connection.query(queryString, function (err, response) {
       if (err) throw err;
       cb(response);
+      console.log(response);
     });
   },
 };
