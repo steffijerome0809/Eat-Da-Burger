@@ -38,10 +38,9 @@ var orm = {
 
   insertOne: function (table, col, val, cb) {
     var queryString =
-      "INSERT INTO" + table + "(" + col + ") values (" + val + '");';
+      "INSERT INTO" + table + "(" + col + ") values (" + val + ");";
     connection.query(queryString, function (err, response) {
       if (err) throw err;
-
       cb(response);
     });
   },
